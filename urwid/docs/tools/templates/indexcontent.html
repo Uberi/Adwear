@@ -1,0 +1,76 @@
+{% extends "!defindex.html" %}
+{% block body %}
+<h1>Urwid{% if 'dev' in release %} development version{% endif %}</h1>
+<div style="float: left; width: 500px;">
+<p>Console user interface library for Python</p>
+
+<ul>
+{% if 'dev' in release %}<li>Stable release available at <a href="http://urwid.org/">http://urwid.org</a></li>
+{% else %}
+<li><a href="https://pypi.python.org/packages/source/u/urwid/urwid-{{ release }}.tar.gz"
+>Download: urwid-{{ release }}.tar.gz</a></li>
+{% endif %}
+<li><a href="changelog.html">Changelog</a>
+</ul>
+
+<div class="hilight"><pre>git clone https://github.com/urwid/urwid.git</pre></div>
+
+<ul>
+<li><a href="http://github.com/urwid/urwid">Github page</a></li>
+<li><a href="http://github.com/urwid/urwid/issues">Issues</a></li>
+<li><a href="http://webchat.oftc.net/?channels=%23urwid">IRC: <code>#urwid on irc.oftc.net</code></a></li>
+<li><a href="https://groups.google.com/a/excess.org/d/forum/urwid">Mailing list</a>
+(or email <a href="mailto:urwid-subscribe@excess.org">urwid-subscribe@excess.org</a>)</li>
+</ul>
+
+<p>Wiki:</p>
+
+<ul>
+<li><a href="http://github.com/urwid/urwid/wiki/Installation-instructions">Installation instructions</a></li>
+<li><a href="http://github.com/urwid/urwid/wiki/FAQ">FAQ</a></li>
+<li><a href="http://github.com/urwid/urwid/wiki/Application-list">Applications built with Urwid</a></li>
+<li><a href="http://github.com/urwid/urwid/wiki/How-you-can-help">How you can help</a></li>
+<li><a href="http://github.com/urwid/urwid/wiki/Coding-style">Coding style</a></li>
+<li><a href="http://github.com/urwid/urwid/wiki/Planned-development">Planned development</a></li>
+</ul>
+
+<div class="section" id="requirements">
+<h3>Requirements</h3>
+<ul>
+<li>Python 2.6, 2.7, 3.2+ or PyPy</li>
+<li>Linux, OSX, Cygwin or other unix-like OS</li>
+<li>python-gi for GlibEventLoop (optional)</li>
+<li>Twisted for TwistedEventLoop (optional)</li>
+<li>Tornado for TornadoEventLoop (optional)</li>
+<li>asyncio or trollius for AsyncioEventLoop (optional)</li>
+<li>Apache for web_display module (optional)</li>
+<li>ncurses for curses_display module (optional)</li>
+</ul>
+</div>
+
+<div class="section" id="similar">
+<h3>Similar projects</h3>
+<ul>
+<li><a href="http://www.npcole.com/npyscreen/">npyscreen</a></li>
+<li><a href="https://github.com/thomasballinger/curtsies">curtsies</a></li>
+<li><a href="https://github.com/jonathanslenders/python-prompt-toolkit">Python Prompt Toolkit</a></li>
+</ul>
+</div>
+</div>
+
+<div style="padding-left: 560px;">
+<div class="section" id="big-buttons">
+<p><a class="reference external image-reference" href="examples/index.html"><img alt="_images/graph2.png" src="_images/graph2.png" width="200" style="padding-bottom: 5px" /></br>
+Examples</a></p>
+<p><a class="reference external image-reference" href="tutorial/index.html"><img alt="_images/highcolors1.png" src="_images/highcolors1.png" width="200" style="padding-bottom: 5px" /></br>
+Tutorial</a></p>
+<p><a class="reference external image-reference" href="manual/index.html"><img alt="_images/introduction.png" src="_images/introduction.png" width="200" style="padding-bottom: 5px" /></br>
+Manual</a></p>
+<p><a class="reference external image-reference" href="reference/index.html"><img alt="_images/urwid_widgets_1.png" src="_images/urwid_widgets_1.png" width="200" style="padding-bottom: 5px" /></br>
+Reference</a></p>
+<p><a class="reference internal" href="genindex.html">Index</a></p>
+<p><a class="reference internal" href="search.html">Search Page</a></p>
+</div>
+</div>
+<div style="clear:both">&nbsp;</div>
+{% endblock %}
