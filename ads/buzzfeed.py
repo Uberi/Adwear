@@ -5,15 +5,14 @@ import urwid
 
 palette = [
     ("banner", "black", "light gray"),
-    ("streak", "black", "dark gray"),
-    ("bg", "black", "dark blue"),
-]
+    ("streak", "black", "light cyan"),
+    ("bg", "black", "light blue"),]
 
 txt = urwid.Text(("banner", """
 
-YOU HAVE RUN THE 10 MILLIONTH COMMAND IN THIS TERMINAL!!!!!
+ONE WEIRD (づ｡◕‿‿◕｡)づ FRUIT THIS PERSON FOUND TO KEEP THE DOCTOR AWAY
 
-CLICK TO CLAIM YOU'RE PRIZE!!!!!!!!!!!!!!!!!
+YOU WON'T BELIEVE NUMER 5!!!
 
 """), align="center")
 map1 = urwid.AttrMap(txt, "streak")
