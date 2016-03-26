@@ -4,27 +4,27 @@ import random
 
 #need this to pad the animation
 height = 48
-width = 48
+width = 40
 
 #the canvas we have to work with
 screen1 = [['-']*width for i in range(height)]
 screen2 = [['-']*width for i in range(height)]
 
 a = '''
-     __ __   ___   __ __  __  __ __    ___ 
-    |  T  T /   \ |  T  TT  ||  T  |  /  _]
-    |  |  |Y     Y|  |  |l_ ||  |  | /  [_ 
-    |  ~  ||  O  ||  |  |  \l|  |  |Y    _]
-    l___, ||     ||  :  |    l  :  !|   [_ 
-    |     !l     !l     |     \   / |     T
-    l____/  \___/  \__,_j      \_/  l_____j
-     __    __   ___   ____   __  __  __    
-    |  T__T  T /   \ |    \ |  T|  T|  T   
-    |  |  |  |Y     Y|  _  Y|  ||  ||  |   
-    |  |  |  ||  O  ||  |  ||__j|__j|__j   
-    l  `  '  !|     ||  |  | __  __  __    
-     \      / l     !|  |  ||  T|  T|  T   
-      \_/\_/   \___/ l__j__jl__jl__jl__j   
+ __ __   ___   __ __  __  __ __    ___ 
+|  T  T /   \ |  T  TT  ||  T  |  /  _]
+|  |  |Y     Y|  |  |l_ ||  |  | /  [_ 
+|  ~  ||  O  ||  |  |  \l|  |  |Y    _]
+l___, ||     ||  :  |    l  :  !|   [_ 
+|     !l     !l     |     \   / |     T
+l____/  \___/  \__,_j      \_/  l_____j
+ __    __   ___   ____   __  __  __    
+|  T__T  T /   \ |    \ |  T|  T|  T   
+|  |  |  |Y     Y|  _  Y|  ||  ||  |   
+|  |  |  ||  O  ||  |  ||__j|__j|__j   
+l  `  '  !|     ||  |  | __  __  __    
+ \      / l     !|  |  ||  T|  T|  T   
+  \_/\_/   \___/ l__j__jl__jl__jl__j   
 '''
 
 b = a.strip('\n').split('\n')
@@ -46,7 +46,7 @@ for j in range(height):
             screen2[j][k] = '+'
 
 def randomizer(a,line):
-    b = ['x'*48]
+    b = ['x'*40]
     for i,k in enumerate(a):
         if i > line:
             print("".join(b))
@@ -54,9 +54,9 @@ def randomizer(a,line):
             print("".join(k))
 def checker_print(i):
     if(i%2 == 0):
-        print("\n".join("".join(i) for i in screen1[:48-25]))
+        print("\n".join("".join(i) for i in screen1[:40-25]))
     else:
-        print("\n".join("".join(i) for i in screen2[:48-25]))
+        print("\n".join("".join(i) for i in screen2[:40-25]))
     randomizer(b,i)
     if(i%2 == 0):
         print("\n".join("".join(i) for i in screen1[25:]))
