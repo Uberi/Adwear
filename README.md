@@ -1,6 +1,8 @@
 ADWEAR
 ======
 
+![](https://img.shields.io/badge/type-dank%20memes-brightgreen.svg)
+
 ## Inspiration
 
 Did you ever wish you could monetize your terminal? We didn't. But now you can!
